@@ -75,11 +75,10 @@ body.lock {
     }
 }
 .title {
-    font-family: "Raleway_Bold";
+    font-family: "Kyiv_Type";
     color: $black;
     font-size: calc(var(--kof) * 100);
     line-height: 110%;
-    letter-spacing: -0.05em;
     text-transform: uppercase;
 
     @media (max-width: 767px) {
