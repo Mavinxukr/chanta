@@ -13,10 +13,7 @@ $(document).ready(function () {
         $('.sidebar-btn,.sidebar').toggleClass('active');
         $('body').toggleClass('lock');
     });
-    let scroll = 0;
-    if(window.scrollY != scroll){
-        console.log('true')
-    }
+
 });
 
 // SLIDER

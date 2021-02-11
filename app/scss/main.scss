@@ -963,6 +963,14 @@ body.lock {
         background-image: url('../images/dist/icons/frozen-mob.svg');
         width: 130px;
         height: 39px;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 130px;
+            height: 39px;
+            background-image: url('../images/dist/img/frozen.png');
+        }
     }
 
     .frozen__title {
