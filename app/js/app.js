@@ -1,12 +1,23 @@
 
 // BURGER MENU
 $(document).ready(function () {
-    $('.sidebar-btn').click(function (event) {
+    $('.sidebar-btn').click(function () {
+        $('.line-black').toggleClass('line-black-move');
+        // if($('.sidebar-btn').hasClass('active') ){
+        //     $('.line-red').addClass('line-red-move');
+        // }
+        // }else{
+        //     $('.line-black').removeClass('line-black-move');
+        // }
+        
         $('.sidebar-btn,.sidebar').toggleClass('active');
         $('body').toggleClass('lock');
     });
+    let scroll = 0;
+    if(window.scrollY != scroll){
+        console.log('true')
+    }
 });
-
 
 // SLIDER
 $(document).ready(function () {
@@ -31,6 +42,7 @@ $(document).ready(function () {
         ]
     });
 });
+
 $(document).ready(function () {
     $('.slider').slick({
         arrows: true,

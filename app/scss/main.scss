@@ -192,10 +192,6 @@ body.lock {
 }
 
 
-
-
-// REVIWERS
-
 .reviews {
     background-color: $white;
     position: relative;
@@ -239,7 +235,6 @@ body.lock {
 .reviews--texts {
     height: 42vh;
     position: relative;
-
 }
 
 .reviews__item--text {
@@ -265,8 +260,6 @@ body.lock {
 .healthly-bread {
     display: flex;
     justify-content: space-between;
-
-
 }
 
 .healthly-bread__about {
@@ -314,17 +307,6 @@ body.lock {
     width: 20vw;
 
 }
-
-.scroll-img1 {
-    // width: 10vw;
-}
-
-.scroll-img2 img {
-    // width: 10vw;
-}
-
-
-// // PRODUCTION
 
 .production {
     padding-top: calc(var(--kof) * 120);
@@ -412,10 +394,6 @@ body.lock {
 
 }
 
-
-
-//SLIDER 
-
 .slider {
     position: relative;
 }
@@ -473,10 +451,6 @@ body.lock {
     }
 }
 
-
-
-// // FROZEN
-
 .frozen-bg {
     position: relative;
     background-image: url('../images/dist/img/frozen-bg.png');
@@ -485,7 +459,6 @@ body.lock {
     width: 100%;
     height: 100%;
     padding-bottom: calc(var(--kof) * 235);
-    // z-index: 31;
     padding-top: calc(var(--kof) * 200);
 }
 
@@ -542,12 +515,6 @@ body.lock {
     z-index: 28;
 }
 
-
-
-
-// //CULTURE
-
-
 .culture-section {
     background-image: url('../images/dist/img/breads.png');
     background-position-y: 100%;
@@ -603,10 +570,6 @@ body.lock {
 .culture__list {
     list-style: none;
 }
-
-
-
-// // REVIWERS TEAM
 
 .team {
     display: flex;
@@ -768,8 +731,23 @@ body.lock {
 }
 
 
+
+//mobile media
+.mobile {
+    &-logo {
+        display: none;
+    }
+
+    &-footer {
+        &-menu {
+            display: none;
+        }
+    }
+}
+
 @media (max-width: 992px) {
 
+    // mobile 992px old code start
     .btn {
         background-color: $red;
         color: $white;
@@ -785,9 +763,6 @@ body.lock {
             background-color: transparent;
         }
     }
-
-    //TOP_SCREEN
-
 
     .top-block {
         margin-top: calc(var(--kof) * 240);
@@ -815,8 +790,6 @@ body.lock {
     .arrow {
         right: 45%;
     }
-
-    // // REVIEWS
 
     .reviews {
         padding-bottom: calc(var(--kof) * 90);
@@ -851,8 +824,6 @@ body.lock {
     .reviews--texts {
         height: 1vh;
     }
-
-    // healthly-bread
 
     .healthly-bread {
         display: flex;
@@ -889,9 +860,6 @@ body.lock {
         display: none;
     }
 
-
-    //     //PRODUCTION
-
     .production {
         padding-top: calc(var(--kof) * 70);
         padding-bottom: calc(var(--kof) * 40);
@@ -921,8 +889,6 @@ body.lock {
     .production__list {
         margin: 0;
     }
-
-    .production__item {}
 
     .production__item--img {
         margin-right: 10px;
@@ -959,11 +925,6 @@ body.lock {
     .production__block--text {
         font-size: calc(var(--kof) * 16);
     }
-
-
-
-
-    //     //FROZEN
 
     .frozen-bg {
         display: flex;
@@ -1021,8 +982,6 @@ body.lock {
         width: 100%;
     }
 
-    //     //CULTURE
-
     .culture-section {
         display: flex;
         align-items: center;
@@ -1044,7 +1003,6 @@ body.lock {
         z-index: 49;
     }
 
-
     .culture {
         margin-left: 22px;
         margin-right: 22px;
@@ -1065,10 +1023,6 @@ body.lock {
         width: calc(var(--kof) * 300);
         height: calc(var(--kof) * 300);
     }
-
-
-    //     //TEAM
-
 
     .team {
         padding-top: 70px;
@@ -1101,10 +1055,6 @@ body.lock {
         margin-right: calc(var(--kof) * 0);
     }
 
-
-
-    //     //CONATACTS
-
     .contacts-section {
         display: flex;
         flex-direction: column;
@@ -1127,8 +1077,6 @@ body.lock {
         align-items: center;
         width: 100%;
     }
-
-
 
     .buy__btn {
         display: flex;
@@ -1202,21 +1150,23 @@ body.lock {
         top: 50%;
         width: 100%;
     }
-}
 
-@media (max-width: 767px) {
+    // mobile 992px old code end
 
-    // REVIEWS
-
-
-    .reviews__item {
-        height: 75vh;
+    // CDenis mobile 992px 
+    .footer {
+        &-menu {
+            display: none;
+        }
     }
 
-    .reviews__img {
-        width: 100%;
-        top: -10px;
-        left: -10px;
-
+    .mobile {
+        &-footer {
+            &-menu {
+                display: flex;
+            }
+        }
     }
 }
+
+@media (max-width: 767px) {}
