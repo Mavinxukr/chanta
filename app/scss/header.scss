@@ -252,6 +252,11 @@
     margin-bottom: calc(var(--kof) * 40);
     width: 240px;
 
+    &--link {
+        font-family: Kyiv_Type;
+        font-weight: 500;
+    }
+
     &::before {
         display: block;
         background-color: $red;
@@ -269,6 +274,7 @@
 }
 
 .main__item--link {
+    font-family: Kyiv_Type;
     color: $black;
     font-size: 30px;
     line-height: 100%;
@@ -308,6 +314,15 @@
     width: 100px;
     height: 32px;
     margin-top: calc(var(--kof) * 7);
+
+    &:before {
+        content: '';
+        display: block;
+        background-image: url('../images/dist/img/frozen-cold.png');
+        width: 100px;
+        height: 32px;
+        z-index: 2;
+    }
 }
 
 

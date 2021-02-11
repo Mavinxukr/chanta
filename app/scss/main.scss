@@ -46,12 +46,17 @@ body.lock {
 }
 
 .btn {
-    font-family: 'Raleway_Regular';
+    font-family: 'Kyiv_Type';
+    width: 330px;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 12px;
     background-color: $red;
     color: $white;
     font-size: calc(var(--kof) * 12);
     line-height: 100%;
-    letter-spacing: calc(var(--kof) * 2.4);
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     text-decoration: none;
     padding: 19px 26px;
@@ -153,6 +158,12 @@ body.lock {
         line-height: 90%;
     }
 
+    &__link {
+        width: 264px;
+        text-align: center;
+        font-size: 12px;
+    }
+
     @media (max-width: 767px) {
         &__title {
             width: calc(var(--kof) * 330);
@@ -233,6 +244,18 @@ body.lock {
         font-family: 'Kyiv_Type_bold';
         font-size: 16px;
     }
+
+    &--text {
+        position: relative;
+        margin-left: 20px;
+
+        &:after {
+            content: url('../images/dist/icons/«red.svg');
+            position: absolute;
+            top: -76px;
+            right: 0px;
+        }
+    }
 }
 
 .reviews__img {
@@ -270,6 +293,7 @@ body.lock {
 .healthly-bread {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .healthly-bread__about {
@@ -282,7 +306,7 @@ body.lock {
 
     &--title {
         position: relative;
-        font-size: calc(var(--kof) * 70);
+        font-size: 38px;
         margin-bottom: calc(var(--kof) * 52);
 
         &::after {
@@ -294,10 +318,15 @@ body.lock {
             height: calc(var(--kof) * 2);
             bottom: -7vh;
 
+            @media screen and (max-width: 1000px) {
+                display: none;
+            }
         }
     }
 
     &--text {
+        font-size: 16px;
+        line-height: 18.78px;
         padding-left: calc(var(--kof) * 100);
         margin-bottom: calc(var(--kof) * 31);
     }
@@ -306,6 +335,11 @@ body.lock {
 
 .healthly-bread__btn {
     margin-top: calc(var(--kof) * 33);
+
+    &--link {
+        width: 330px;
+        font-size: 12px;
+    }
 }
 
 
@@ -328,7 +362,8 @@ body.lock {
     margin-bottom: calc(var(--kof) * 70);
 
     &--title {
-        font-size: calc(var(--kof) * 40);
+        font-size: 36px;
+        line-height: 39.6px;
 
         span {
             font-size: calc(var(--kof) * 60);
@@ -381,6 +416,7 @@ body.lock {
         line-height: 130%;
         margin: calc(var(--kof) * 20);
         margin-bottom: calc(var(--kof) * 10);
+
     }
 
     &--text {
@@ -497,6 +533,8 @@ body.lock {
         margin-bottom: calc(var(--kof) * 30);
         padding-left: calc(var(--kof) * 100);
         max-width: 70%;
+        font-size: 16px;
+        line-height: 18.78px;
     }
 }
 
@@ -763,6 +801,7 @@ body.lock {
 
     &-footer {
         &-menu {
+            padding-bottom: 130px;
             display: none;
         }
     }
@@ -854,7 +893,6 @@ body.lock {
         align-items: center;
         justify-content: center;
         padding-top: 70px;
-        padding-bottom: 92px;
     }
 
     .healthly-bread__about {
@@ -929,10 +967,6 @@ body.lock {
     .production__block {
         width: 270px;
         background-color: $red;
-
-    }
-
-    .production__block {
         position: absolute;
         top: calc(var(--kof) * 220);
         left: 0;
@@ -943,7 +977,8 @@ body.lock {
     }
 
     .production__block--sibtitle {
-        font-size: calc(var(--kof) * 20);
+        font-size: 18px;
+        font-family: Kyiv_Type;
     }
 
     .production__block--text {
@@ -991,9 +1026,6 @@ body.lock {
         font-size: calc(var(--kof) * 38);
     }
 
-    .frozen__subtitle {
-        font-size: calc(var(--kof) * 40);
-    }
 
     .text-dekor {
         display: none;
@@ -1059,21 +1091,34 @@ body.lock {
     .team {
         padding-top: 70px;
         flex-direction: column;
+
+        &__list {
+            &:after {
+                content: url('../images/dist/icons/«red.svg');
+                display: block;
+                position: absolute;
+                top: 80px;
+                right: 20px;
+            }
+        }
     }
 
     .team__block {
         max-width: calc(var(--kof) * 400);
         margin-left: calc(var(--kof) * 22);
         margin-right: calc(var(--kof) * 22);
+        position: relative;
     }
 
     .team__item {
+        width: 100% !important;
         margin-right: calc(var(--kof) * 35);
     }
 
     .team__block--title {
         font-size: calc(var(--kof) * 38);
         margin-left: calc(var(--kof) * 22);
+        margin-bottom: 80px;
 
     }
 
@@ -1134,7 +1179,8 @@ body.lock {
         justify-content: center;
         background-color: $red;
         border: none;
-        width: 90%;
+        width: 330px;
+        font-size: 12px;
         margin-bottom: calc(var(--kof) * 20);
         margin-right: 0;
     }
@@ -1159,7 +1205,7 @@ body.lock {
         justify-content: center;
         background-color: $red;
         border: none;
-        width: 90%;
+        width: 330px;
     }
 
     .partners__btn--link {
@@ -1196,6 +1242,43 @@ body.lock {
         &-footer {
             &-menu {
                 display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+
+                &__socials {
+                    display: flex;
+                    margin-bottom: 20px;
+                }
+
+                &__facebook {
+                    background-image: url('../images/dist/icons/facebook.svg');
+                    width: 50px;
+                    height: 50px;
+                    margin-right: calc(var(--kof) * 20);
+                }
+
+                &__instagram {
+                    background-image: url('../images/dist/icons/instagram.svg');
+                    width: 50px;
+                    height: 50px;
+                }
+
+                &__contacts {
+                    &--text {
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        font-family: Raleway_Regular;
+                        opacity: .5;
+                        text-align: center;
+                    }
+
+                    &--link {
+                        font-family: Montserrat_Regular;
+                        color: #0b0d0e;
+                        font-size: 26px;
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
@@ -1240,6 +1323,10 @@ body.lock {
         &-duble {
             margin-left: 75%;
         }
+    }
+
+    .production__block {
+        top: 100px;
     }
 
 }
