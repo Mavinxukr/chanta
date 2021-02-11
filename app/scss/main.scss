@@ -223,6 +223,10 @@ body.lock {
     position: relative;
     height: 90vh;
 
+    &--author {
+        font-family: 'Kyiv_Type_bold';
+        font-size: 16px;
+    }
 }
 
 .reviews__img {
@@ -470,6 +474,7 @@ body.lock {
 
     &__title {
         margin-bottom: calc(var(--kof) * 20);
+        font-size: 70px;
     }
 
     &__subtitle {
@@ -585,6 +590,7 @@ body.lock {
         margin-left: calc(var(--kof) * 240);
 
         &--title {
+            font-size: 70px;
             text-transform: uppercase;
             margin-bottom: calc(var(--kof) * 24);
             opacity: 0.8;
@@ -604,6 +610,8 @@ body.lock {
         }
 
         &--author {
+            font-family: 'Kyiv_Type_bold';
+            font-size: 16px;
             text-align: right;
         }
     }
@@ -649,6 +657,7 @@ body.lock {
     z-index: 61;
 
     &__title {
+        font-size: 70px;
         text-transform: uppercase;
         margin-bottom: calc(var(--kof) * 70);
 
@@ -743,6 +752,7 @@ body.lock {
             display: none;
         }
     }
+
 }
 
 @media (max-width: 992px) {
@@ -1170,3 +1180,38 @@ body.lock {
 }
 
 @media (max-width: 767px) {}
+
+@media (max-width: 500px) {
+    .nav {
+        margin: 0;
+        position: relative;
+        top: 130px;
+        left: 23px;
+
+        &__item {
+            width: 100%;
+
+            &::before {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .sub {
+        &__item {
+            margin-bottom: 16px;
+        }
+    }
+
+    .main {
+        &__item {
+            margin-bottom: 30px;
+
+            &--link {
+                font-weight: 500;
+                font-size: 30px;
+            }
+        }
+    }
+
+}

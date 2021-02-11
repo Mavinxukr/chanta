@@ -4,6 +4,7 @@
     font-weight: 400;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Raleway_Bold";
     src: url("../fonts/Raleway-Bold.woff");
@@ -22,5 +23,12 @@
     font-family: "Kyiv_Type";
     src: url("../fonts/Kiev-Type/KyivTypeSans-Regular-.woff");
     font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kyiv_Type_bold";
+    src: url("../fonts/Kiev-Type/KyivTypeSans-Bold-.woff");
+    font-weight: 500;
     font-style: normal;
 }
