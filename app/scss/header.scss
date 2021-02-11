@@ -98,6 +98,13 @@
 }
 
 .sidebar-btn {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
     &::after {
         bottom: 0;
     }
@@ -119,6 +126,12 @@
 
 
 .lang__list {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     list-style: none;
 }
 
@@ -130,47 +143,6 @@
     text-transform: uppercase;
     text-decoration: none;
 }
-
-
-// .page__nav {
-//     position: fixed;
-//     top: calc(var(--kof) * 200);
-//     right: 0;
-//     // width: 300px;
-//     z-index: 10000;
-// }
-// .page-nav__list {
-//     display: flex;
-//     flex-direction: row-reverse;
-//     list-style: none;
-//     // transform: rotate(-90deg);
-// }
-// .page-nav__item {
-//     margin-top: 30px;
-//     margin-left: calc(var(--kof) * 20);
-//     // transform: rotate(-90deg);
-// }
-// .page-nav__link {
-//     color: $black;
-//     text-decoration: none;
-// }
-// .dots-text {
-//     display: flex;
-//     align-items: center;
-
-// }
-// .page-nav__dot {
-//     display: block;
-//     background-color: $black;
-//     border-radius: 50%;
-//     width: 7px;
-//     height: 7px;
-//     margin-right: calc(var(--kof) * 20);
-
-// }
-
-
-
 
 .logo {
     position: fixed;
@@ -260,8 +232,6 @@
 .main__list {
     list-style: none;
     display: flex;
-    // max-width: calc(var(--kof) * 960);
-    // margin: 0 auto;
     margin-top: 10%;
     z-index: 1000;
 
@@ -273,7 +243,6 @@
     flex-wrap: wrap;
     list-style: none;
     z-index: 50;
-    // max-width: calc(var(--kof) * 960);
     margin: 0 auto;
 
 }
@@ -291,14 +260,6 @@
         height: 5px;
         clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0 100%);
         margin-bottom: calc(var(--kof) * 7);
-    }
-
-    &:nth-last-child(-n + 3) {
-        // margin-bottom: 0;
-    }
-
-    &:nth-child(3n) {
-        // margin-right: 0;
     }
 }
 
@@ -404,7 +365,6 @@
 
 @media (max-width: 992px) {
     .logo {
-        // background-image: url('../images/dist/icons/logo-mob.svg');
         background-repeat: no-repeat;
         width: 140px;
         height: 105px;
