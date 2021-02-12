@@ -49,6 +49,8 @@ $(document).ready(function () {
     });
 });
 
+// REMOVE CLASS CONTAINER
+
 if(document.body.clientWidth <= 768){
     let container = document.querySelector('.container');
     container.classList.remove('container');
