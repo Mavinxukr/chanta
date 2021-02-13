@@ -7,7 +7,43 @@ $(document).ready(function () {
         $('body').toggleClass('lock');
     });
 });
-
+//AUTO SLIDER MAIN DESKTOP
+let intervalCsaHead = setInterval(csaHead,8000);
+let imgHead = [
+                // '../images/dist/img/mainBg/1.png',
+                '../images/dist/img/mainBg/2.png',
+                '../images/dist/img/mainBg/3.png',
+                '../images/dist/img/mainBg/4.png',
+                '../images/dist/img/mainBg/5.png',
+                '../images/dist/img/mainBg/6.png',
+                '../images/dist/img/mainBg/7.png',
+                '../images/dist/img/mainBg/8.png',
+            ], i = 1;
+function csaHead(){
+    if(i > (imgHead.length - 1)){
+        clearInterval(intervalCsaHead);
+        $('#section-1').animate({'opacity':'0'}, 200 , function(){
+            i=1;
+            $('#section-1').css({
+                'background' : `url(${imgHead[0]})`,
+                'background-size': 'cover',
+                'background-repeat': 'no-repeat',
+            });
+        });
+        $('.top-main-bg ').animate({'opacity':'1'}, 200);
+    }else{
+        $('.top-main-bg ').animate({'opacity':'0'}, 200,function(){
+            $('.top-main-bg ').css({
+                'background':'url('+imgHead[i]+')',
+                'background-size': 'cover',
+                'background-repeat': 'no-repeat',
+            });
+            i++;
+        });
+        $('.top-main-bg ').animate({'opacity':'1'}, 200);
+    }
+}
+    
 // SLIDER
 $(document).ready(function () {
     $('.slider-reviews').slick({

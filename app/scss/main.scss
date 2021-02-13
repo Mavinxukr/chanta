@@ -132,7 +132,8 @@ body.lock {
 // Top page
 
 .top-main-bg {
-    background-image: url('../images/dist/img/Video.jpg');
+    background: url('../images/dist/img/mainBg/1.png');
+    // background-image: url('../images/dist/img/Video.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -371,18 +372,10 @@ body.lock {
             display: inline-block;
             margin-bottom: 15px;
             font-size: 26px;
-
-            @media screen and (max-width: 350px) {
-                font-size: 26px;
-            }
         }
 
         span:last-child {
             font-size: 36px;
-
-            @media screen and (max-width: 350px) {
-                font-size: 36px;
-            }
         }
     }
 }
@@ -956,13 +949,14 @@ body.lock {
     }
 
     .production__about--title {
-        font-size: calc(var(--kof) * 26);
+        font-size: 26px;
+        font-family: 'Kyiv_Type';
         margin: 0;
     }
 
     .production__about--title span {
-        font-size: calc(var(--kof) * 40);
-
+        font-size: 36px;
+        font-family: 'Kyiv_Type';
     }
 
     .production__list {
@@ -1324,10 +1318,6 @@ body.lock {
         }
     }
 
-    .slider .slick-arrow.slick-prev {
-        right: 37px;
-    }
-
     .slider .slick-arrow {
         width: 47px;
         height: 47px;
@@ -1370,11 +1360,19 @@ body.lock {
             margin-left: 75%;
         }
     }
+
+    .slider .slick-arrow.slick-prev {
+        right: 37px;
+    }
 }
 
 @media (max-width: 350px) {
     .mobile-footer-menu {
         margin-right: 45px;
+    }
+
+    .slider .slick-arrow.slick-prev {
+        right: 36px;
     }
 
     .reviews {
@@ -1400,16 +1398,18 @@ body.lock {
         &__about {
             &--title {
                 span:first-child {
-                    font-size: 16px !important;
+                    font-size: 26px;
+                    letter-spacing: -0.05em;
                 }
 
                 span:last-child {
-                    font-size: 26px !important;
+                    font-size: 36px;
+                    letter-spacing: -0.05em;
                 }
             }
         }
 
-        &__ {
+        &__block {
             &--subtitle {
                 font-size: 18px;
             }
@@ -1439,6 +1439,10 @@ body.lock {
             &--text {
                 width: 302px;
             }
+
+            &--author {
+                margin-bottom: 20px;
+            }
         }
 
         &__list::after {
@@ -1459,8 +1463,29 @@ body.lock {
 
     .call {
         &__tel {
-            font-family: 'Kyiv_Type' !important;
+            font-family: 'Kyiv_Type';
         }
     }
 
+}
+
+.slider:active .slick-arrow:active {
+    color: red;
+    transition: 0s;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    color: red;
 }
