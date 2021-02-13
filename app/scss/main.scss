@@ -132,16 +132,17 @@ body.lock {
 // Top page
 
 .top-main-bg {
-    background: url('../images/dist/img/mainBg/1.png');
+    // background: url('../images/dist/img/mainBg/1.png');
     // background-image: url('../images/dist/img/Video.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
     width: 100%;
     height: 100vh;
     display: flex;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .top-block {
@@ -1488,4 +1489,19 @@ body.lock {
 .slick-prev::before,
 .slick-next::before {
     color: red;
+}
+
+.mainSlider {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+    width: 100%;
+
+    img {
+        object-fit: contain;
+    }
+
+    .slick-list {
+        padding-left: 0;
+    }
 }
