@@ -8,36 +8,6 @@ $(document).ready(function () {
     });
 });
 
-//AUTO SLIDER MAIN DESKTOP
-// let intervalCsaHead = setInterval(csaHead,8000);
-
-// let imgHead = [
-//                 '../images/dist/img/mainBg/2.png',
-//                 '../images/dist/img/mainBg/3.png',
-//                 '../images/dist/img/mainBg/4.png',
-//                 '../images/dist/img/mainBg/5.png',
-//                 '../images/dist/img/mainBg/6.png',
-//                 '../images/dist/img/mainBg/7.png',
-//                 '../images/dist/img/mainBg/8.png',
-//             ], i = 0;
-// function csaHead(){
-//     if(i > (imgHead.length - 1)){
-//         clearInterval(intervalCsaHead);
-//         }else{
-//         $('.top-main-bg ').animate({'opacity':'0'}, 200,function(){
-//             $('.top-main-bg ').css({
-//                 'background':'url('+imgHead[i]+')',
-//                 'background-size': 'cover',
-//                 'background-repeat': 'no-repeat',
-//             });
-//             i++;
-//         });
-//         $('.top-main-bg ').animate({'opacity':'1'}, 200);
-//     }
-// }
-
-
-    
 // SLIDER
 $(document).ready(function () {
     $('.mainSlider').slick({
