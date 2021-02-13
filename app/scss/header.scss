@@ -215,6 +215,7 @@
     z-index: 100000;
     transition: all 0.3s ease 0s;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .sidebar.active {
