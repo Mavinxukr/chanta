@@ -10,7 +10,6 @@ $(document).ready(function () {
 //AUTO SLIDER MAIN DESKTOP
 let intervalCsaHead = setInterval(csaHead,8000);
 let imgHead = [
-                // '../images/dist/img/mainBg/1.png',
                 '../images/dist/img/mainBg/2.png',
                 '../images/dist/img/mainBg/3.png',
                 '../images/dist/img/mainBg/4.png',
