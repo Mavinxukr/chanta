@@ -830,7 +830,7 @@ body.lock {
 
     &-footer {
         &-menu {
-            padding-bottom: 130px;
+            margin-left: -200px;
             display: none;
 
             &__contacts {
@@ -1381,6 +1381,15 @@ body.lock {
 }
 
 @media (max-width: 500px) {
+    .mobile {
+        &-footer {
+            &-menu {
+                padding-bottom: 130px;
+                margin-left: -48px;
+            }
+        }
+    }
+
     .reviews {
         &__img {
             img {
@@ -1476,6 +1485,7 @@ body.lock {
 @media (max-width: 350px) {
     .mobile-footer-menu {
         margin-right: 45px;
+        margin-left: 0;
     }
 
     .slider .slick-arrow.slick-prev {
