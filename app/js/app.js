@@ -7,7 +7,9 @@ $(document).ready(function () {
         $('body').toggleClass('lock');
     });
 });
-
+// if(window.pageYOffset === 835){
+//     $('.sidebar-btn').css('')
+// }
 // SLIDER
 $(document).ready(function () {
     $('.mainSlider').slick({
