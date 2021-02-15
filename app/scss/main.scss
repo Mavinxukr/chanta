@@ -455,7 +455,7 @@ body.lock {
     left: 0;
     margin-left: -20px;
     padding-bottom: 40px;
-    background: linear-gradient($red 50%, $black 50%);
+    // background: linear-gradient($red 50%, $black 50%);
     background-size: 200% 200%;
     transition: 300ms ease-out;
 
@@ -492,8 +492,9 @@ body.lock {
 
 .production__item:nth-child(2n) .production__block {
     top: calc(var(--kof) * 20);
-
 }
+
+
 
 .slider {
     position: relative;
@@ -1435,6 +1436,7 @@ body.lock {
 .footer-menu__contacts--link {
     font-family: "Kyiv_Type_bold";
 }
+
 @media (max-width: 1200px) {
     .bred{
         &-img{
@@ -1696,5 +1698,19 @@ body.lock {
         &__title {
             font-size: 38px;
         }
+    }
+}
+.production__item:nth-child(2) .production__block {
+    position: absolute;
+    background-color: $black;
+    width: 98%;
+    left: 0;
+    margin-left: -20px;
+    padding-bottom: 40px;
+    background: linear-gradient($red 50%, $black 50%);
+    background-size: 200% 200%;
+    transition: 300ms ease-out;
+    &:hover {
+        background-position: -100% -100%;
     }
 }
