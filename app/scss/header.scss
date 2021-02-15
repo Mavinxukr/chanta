@@ -55,14 +55,15 @@
         transform: translate(0%);
         top: -75px;
         right: -50px;
-        transition: 250ms;
+        transition: 450ms;
     }
 
     &:hover .line-black {
         transform: translate(0%);
         top: -75px;
         right: -50px;
-        transition:1000ms;
+        transition:450ms;
+        transition-delay: 450ms;
     }
 }
 
