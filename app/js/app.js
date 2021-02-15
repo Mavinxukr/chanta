@@ -18,10 +18,10 @@ $('#sidebar-btn').mouseout(() => {
     }
 })
 window.addEventListener('scroll', function() {
-    if(window.innerWidth < 500){
+    if(window.innerWidth < 500 && window.pageYOffset < 835){
         $('#sidebar-btn').addClass('sidebar-btn');
     }
-    if(window.pageYOffset > 835){
+    else if(window.pageYOffset > 835){
         $('#sidebar-btn').addClass('sidebar-btn');
     }else{
         $('#sidebar-btn').removeClass('sidebar-btn');
