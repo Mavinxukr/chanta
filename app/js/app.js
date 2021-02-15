@@ -7,7 +7,6 @@ $(document).ready(function () {
         $('body').toggleClass('lock');
     });
 });
-$('#sidebar-btn').removeClass('sidebar-btn');
 $('#sidebar-btn').mouseover(() => {
     $('#sidebar-btn').removeClass('sidebar-btn');
 })
@@ -17,9 +16,11 @@ $('#sidebar-btn').mouseout(() => {
     }else{
         $('#sidebar-btn').removeClass('sidebar-btn');
     }
-
 })
 window.addEventListener('scroll', function() {
+    if(window.innerWidth < 500){
+        $('#sidebar-btn').addClass('sidebar-btn');
+    }
     if(window.pageYOffset > 835){
         $('#sidebar-btn').addClass('sidebar-btn');
     }else{
@@ -27,7 +28,6 @@ window.addEventListener('scroll', function() {
     }
   });
    {
-    
 }
 
 
