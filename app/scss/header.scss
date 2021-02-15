@@ -42,7 +42,7 @@
     transition: 100ms;
 }
 
-.sidebar-btn {
+#sidebar-btn {
     width: 40px;
     height: 25px;
     display: flex;
@@ -62,11 +62,11 @@
         transform: translate(0%);
         top: -75px;
         right: -50px;
-        transition: 450ms;
+        transition:1000ms;
     }
 }
 
-.sidebar-btn {
+#sidebar-btn {
 
     &::after,
     &::before {
@@ -79,7 +79,7 @@
     }
 }
 
-.sidebar-btn span {
+#sidebar-btn span {
     content: '';
     position: absolute;
     background-color: $white;
@@ -89,15 +89,37 @@
     top: 11px;
     transition: all 0.3s ease 0s;
 }
+#sidebar-btn.sidebar-btn span {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 11px;
+    transition: all 0.3s ease 0s;
+}
+#sidebar-btn.sidebar-btn {
 
-.sidebar-btn {
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 3px;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+#sidebar-btn {
     &::before {
         top: 0;
         z-index: 10000;
     }
 }
 
-.sidebar-btn {
+#sidebar-btn {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -110,17 +132,17 @@
     }
 }
 
-.sidebar-btn.active::before {
+#sidebar-btn.active::before {
     transform: rotate(45deg);
     top: 10px;
 }
 
-.sidebar-btn.active::after {
+#sidebar-btn.active::after {
     transform: rotate(-45deg);
     bottom: 11px;
 }
 
-.sidebar-btn.active span {
+#sidebar-btn.active span {
     transform: scale(0);
 }
 

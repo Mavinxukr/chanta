@@ -1,16 +1,16 @@
 @import 'var';
 @import '_fonts';
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
+// ::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent;
+// }
 
-html {
-    box-sizing: border-box;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
+// html {
+//     box-sizing: border-box;
+//     -ms-overflow-style: none;
+//     scrollbar-width: none;
+// }
 
 *,
 *::before,
@@ -132,9 +132,6 @@ body.lock {
     font-size: calc(var(--kof) * 16);
     line-height: calc(var(--kof) * 19);
 }
-
-
-
 
 // Top page
 
@@ -303,6 +300,30 @@ body.lock {
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.bred{
+    &-img{
+        &-top{
+            width: 300px;
+            height: 571px;
+            background: url('./../images/src/img/bread-scroll2.png') no-repeat;
+            background-size:100% 100%;
+            right: 184px;
+            top: 0;
+            position: absolute;
+        }
+        &-bottom{
+            background: url('./../images/src/img/bread-scroll1.png') no-repeat;
+            background-size:100% 100%;
+            width: 300px;
+            height: 571px;
+            position: absolute;
+            bottom: -250px;
+            right: 184px;
+        }
+    }
 }
 
 .healthly-bread__about {
@@ -314,8 +335,9 @@ body.lock {
     margin-bottom: calc(var(--kof) * 226);
 
     &--title {
+        font-family: "Kyiv_Type";
         position: relative;
-        font-size: 38px;
+        font-size: 70px;
         margin-bottom: calc(var(--kof) * 52);
 
         &::after {
@@ -1356,8 +1378,84 @@ body.lock {
         }
     }
 }
+.slider:active .slick-arrow:active {
+    color: red;
+    transition: 0s;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
 
+.slick-prev::before,
+.slick-next::before {
+    color: red;
+}
+
+.mainSlider {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    transition: 1s;
+
+    img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .slick-list {
+        padding-left: 0;
+    }
+
+}
+
+.footer-menu__contacts--link {
+    font-family: "Kyiv_Type_bold";
+}
+@media (max-width: 1200px) {
+    .bred{
+        &-img{
+            &-top{
+                right: 80px;
+            }
+            &-bottom{
+                right: 80px;
+            }
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .bred{
+        &-img{
+            &-top{
+                right: 20px;
+            }
+            &-bottom{
+                right: 20px;
+            }
+        }
+    }
+}
 @media (max-width: 1000px) {
+    .bred{
+        &-img{
+            &-top{
+                display: none;
+            }
+            &-bottom{
+                display: none;
+            }
+        }
+    }
     .production__block {
         top: 100px;
     }
@@ -1381,6 +1479,17 @@ body.lock {
 }
 
 @media (max-width: 500px) {
+    .healthly-bread{
+        &__about{
+            &--title{
+                font-size: 38px;
+                margin-bottom: 50px;
+            }
+            &-text{
+                margin-bottom: 30px;
+            }
+        }
+    }
     .mobile {
         &-footer {
             &-menu {
@@ -1574,48 +1683,4 @@ body.lock {
             font-size: 38px;
         }
     }
-}
-
-.slider:active .slick-arrow:active {
-    color: red;
-    transition: 0s;
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Chrome/Safari/Opera */
-    -khtml-user-select: none;
-    /* Konqueror */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-}
-
-.slick-prev::before,
-.slick-next::before {
-    color: red;
-}
-
-.mainSlider {
-    position: absolute;
-    box-sizing: border-box;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    transition: 1s;
-
-    img {
-        height: 100vh;
-        object-fit: cover;
-    }
-
-    .slick-list {
-        padding-left: 0;
-    }
-
-}
-
-.footer-menu__contacts--link {
-    font-family: "Kyiv_Type_bold";
 }

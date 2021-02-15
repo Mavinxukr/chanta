@@ -7,9 +7,30 @@ $(document).ready(function () {
         $('body').toggleClass('lock');
     });
 });
-// if(window.pageYOffset === 835){
-//     $('.sidebar-btn').css('')
-// }
+$('#sidebar-btn').removeClass('sidebar-btn');
+$('#sidebar-btn').mouseover(() => {
+    $('#sidebar-btn').removeClass('sidebar-btn');
+})
+$('#sidebar-btn').mouseout(() => {
+    if(window.pageYOffset < 835){
+        $('#sidebar-btn').addClass('sidebar-btn');
+    }else{
+        $('#sidebar-btn').removeClass('sidebar-btn');
+    }
+
+})
+window.addEventListener('scroll', function() {
+    if(window.pageYOffset > 835){
+        $('#sidebar-btn').addClass('sidebar-btn');
+    }else{
+        $('#sidebar-btn').removeClass('sidebar-btn');
+    }
+  });
+   {
+    
+}
+
+
 // SLIDER
 $(document).ready(function () {
     $('.mainSlider').slick({
